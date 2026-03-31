@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import AddGameStyles from '../styles/AddGameStyles';
 
+// Form screen to add a new game, with validation and clear action.
 export default function AddGameScreen() {
   const [title, setTitle] = useState('');
   const [platform, setPlatform] = useState('');
@@ -19,6 +20,7 @@ export default function AddGameScreen() {
   const [ageRating, setAgeRating] = useState('');
   const [isValid, setIsValid] = useState(false);
 
+  // validate fields whenever input changes
   useEffect(() => {
     const priceValue = Number(price);
     const valid =

@@ -3,11 +3,13 @@ import { SafeAreaView, View, Text, Pressable } from 'react-native';
 import gamingNewsData from '../data/gamingNewsData';
 import GamingNewsStyles from '../styles/GamingNewsStyles';
 
+// Gaming news carousel screen: auto-rotate and manual next button.
 export default function GamingNewsScreen() {
   const [news, setNews] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [message, setMessage] = useState('');
 
+  // load news from static data once
   useEffect(() => {
     setNews(gamingNewsData);
   }, []);

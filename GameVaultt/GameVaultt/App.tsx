@@ -12,6 +12,7 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 
+// Alternative sample app entry point (not used if App.js is main entry)
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -23,6 +24,7 @@ function App() {
   );
 }
 
+// App content renders placeholder template screen.
 function AppContent() {
   const safeAreaInsets = useSafeAreaInsets();
 

@@ -9,6 +9,7 @@ import GamingNewsScreen from '../screens/GamingNewsScreen';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
+// Catalog stack handles list/detail navigation inside the Catalog tab.
 function CatalogStack() {
   return (
     <Stack.Navigator>
@@ -26,6 +27,7 @@ function CatalogStack() {
   );
 }
 
+// Main app navigator. Uses tabs to switch between sections.
 export default function AppNavigator() {
   return (
     <Tab.Navigator>

@@ -7,14 +7,17 @@ import {
 } from 'react-native';
 import GameDetailStyles from '../styles/GameDetailStyles';
 
+// Displays details of selected game and toggles wishlist status
 export default function GameDetailScreen({ route, navigation }) {
   const { game } = route.params;
   const [wishlist, setWishlist] = useState(false);
 
+  // side effect runs when selected game changes (currently placeholder)
   useEffect(() => {
     // update when the game changes
   }, [game]);
 
+  // choose platform-specific style class
   const platformStyle = () => {
     if (game.platform === 'PS5') return GameDetailStyles.ps5;
     if (game.platform === 'Xbox') return GameDetailStyles.xbox;

@@ -73,9 +73,11 @@ const initialGames = [
 ];
 
 export default function GameListScreen({ navigation }) {
+  // main screen state: games list and loading indicator
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // simulate data fetching: show spinner, then set data
   useEffect(() => {
     const timer = setTimeout(() => {
       setGames(initialGames);
@@ -85,6 +87,7 @@ export default function GameListScreen({ navigation }) {
     return () => clearTimeout(timer);
   }, []);
 
+  // render one game card; navigate to detail screen on press
   const renderItem = ({ item }) => (
     <Pressable
       style={GameListStyles.card}
