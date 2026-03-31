@@ -1,22 +1,53 @@
 # GameVault
 
-Full name: jose andres quiñones valencia , jerson alonso renteria cuesta
+Full name: Jose Andres Quiñones Valencia, Jerson Alonso Renteria Cuesta
 
-## Descripción
-GameVault es una app de tienda de videojuegos con catálogo, detalles, agregar juegos y noticias. La app utiliza React Native CLI y React Navigation con navegación por pestañas y stack.
+## Description
+GameVault is a video game store app with a catalog, details, game addition feature, and news. The app uses React Native CLI and React Navigation with tabbed navigation and a stack.
 
-## Ejecución en Android Studio Emulator
-1. Abrir terminal en el directorio del proyecto.
-2. Ejecutar `npm install`.
-3. Ejecutar `npx react-native start`.
-4. En otra terminal ejecutar `npx react-native run-android`.
+## Running in Android Studio Emulator
+1. Open a terminal in the project directory.
 
-## Requisitos previos
-- Android Studio instalado
-- SDK Android configurado
-- Emulador creado y ejecutándose
+2. Run `npm install`.
 
-## Tecnologías utilizadas
+3. Run `npx react-native start`.
+
+4. In another terminal, run `npx react-native run-android`.
+
+## Prerequisites
+- Android Studio installed
+- Android SDK configured
+- Emulator created and running
+
+## Technologies used
+- react
+- react-native
+- @react-navigation/native
+- @react-navigation/native-stack
+- @react-navigation/bottom-tabs
+- react-native-screens
+- react-native-safe-area-context# GameVault
+
+Full name: Jose Andres Quiñones Valencia, Jerson Alonso Renteria Cuesta
+
+## Description
+GameVault is a video game store app with a catalog, details, game addition feature, and news. The app uses React Native CLI and React Navigation with tabbed navigation and a stack.
+
+## Running in Android Studio Emulator
+1. Open a terminal in the project directory.
+
+2. Run `npm install`.
+
+3. Run `npx react-native start`.
+
+4. In another terminal, run `npx react-native run-android`.
+
+## Prerequisites
+- Android Studio installed
+- Android SDK configured
+- Emulator created and running
+
+## Technologies used
 - react
 - react-native
 - @react-navigation/native
