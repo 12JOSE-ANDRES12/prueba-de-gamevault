@@ -19,6 +19,7 @@ const initialGames = [
     ageRating: 'T',
     description: 'Aventura espacial con combates intensos y mejoras modulares.',
     emoji: '🚀',
+     
   },
   {
     id: '2',
@@ -29,6 +30,7 @@ const initialGames = [
     ageRating: 'M',
     description: 'Juego de estrategia en tiempo real con batallas futuristas.',
     emoji: '🤖',
+    
   },
   {
     id: '3',
@@ -49,6 +51,7 @@ const initialGames = [
     ageRating: 'T',
     description: 'Carreras extremas con vehículos altamente personalizables.',
     emoji: '🏎️',
+    
   },
   {
     id: '5',
@@ -59,6 +62,7 @@ const initialGames = [
     ageRating: 'T',
     description: 'RPG táctico con batallas por turnos y narrativa profunda.',
     emoji: '⚔️',
+  
   },
   {
     id: '6',
@@ -69,6 +73,7 @@ const initialGames = [
     ageRating: 'M',
     description: 'Campeonato de lucha retro con múltiples arenas y personajes.',
     emoji: '👾',
+    
   },
 ];
 
@@ -97,6 +102,7 @@ export default function GameListScreen({ navigation }) {
       <Text style={GameListStyles.title}>{item.title}</Text>
       <Text style={GameListStyles.text}>Platform: {item.platform}</Text>
       <Text style={GameListStyles.text}>Genre: {item.genre}</Text>
+
     </Pressable>
   );
 
