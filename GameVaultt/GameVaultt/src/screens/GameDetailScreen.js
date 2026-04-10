@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import {
-  SafeAreaView,
   View,
   Text,
   Pressable,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import GameDetailStyles from '../styles/GameDetailStyles';
 
 // Displays details of selected game and toggles wishlist status
 export default function GameDetailScreen({ route, navigation }) {
   const { game } = route.params;
   const [wishlist, setWishlist] = useState(false);
+  const [record, setrecord] = useState([]);
 
   // side effect runs when selected game changes (currently placeholder)
   useEffect(() => {
-    // update when the game changes
+    if (game) {
+      setrecord((prev) => {
+        if (prev[prev.length - 1]?.id === game.id) return prev; // avoid duplicates
+        return [...prev, game];
+      });
+    }
   }, [game]);
 
   // choose platform-specific style class
@@ -43,6 +49,11 @@ export default function GameDetailScreen({ route, navigation }) {
         <Text style={GameDetailStyles.text}>Price: {game.price}</Text>
         <Text style={GameDetailStyles.text}>Age Rating: {game.ageRating}</Text>
         <Text style={GameDetailStyles.description}>{game.description}</Text>
+        <Text style={GameDetailStyles.text}>Último juego visto: {record[record.length - 2]?.title || 'Ninguno'}</Text>
+        <Text style={GameDetailStyles.text}>Horas jugadas: {game.hoursPlayed ? game.hoursPlayed : 'N/A'}</Text>
+         </View>
+        
+        <View style={[GameDetailStyles.card, platformStyle(), genreStyle()]}></View>
         <Pressable
           style={[GameDetailStyles.button, wishlist ? GameDetailStyles.buttonActive : {}]}
           onPress={() => setWishlist((prev) => !prev)}
@@ -55,9 +66,13 @@ export default function GameDetailScreen({ route, navigation }) {
           style={GameDetailStyles.buttonSecondary}
           onPress={() => navigation.goBack()}
         >
+          
+
+          <View style={[GameDetailStyles.card, platformStyle(), genreStyle()]}></View>
           <Text style={GameDetailStyles.buttonText}>Volver</Text>
         </Pressable>
-      </View>
+
+
     </SafeAreaView>
   );
 }
